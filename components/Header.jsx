@@ -67,12 +67,7 @@ function Header() {
 
             {/*  mobile header */}
 
-
-
-
-
-
-            <div className='flex flex-col  md:hidden overflow-y-hidden' >
+         <div className='flex flex-col  md:hidden overflow-y-hidden' >
                 <div className='w-screen  flex  items-center justify-center py-2 px-6   gap-[4rem] bg-[#e4e3e3]  cursor-pointer'>
                     <div className='flex  gap-[20px] justify-center items-center'>
                         <BsSearch className=' w-[30px] h-[30px] cursor-pointer' fill='#575563 ' />
@@ -110,6 +105,11 @@ function Header() {
     )
 }
 export default Header
+
+
+
+
+   
 
 
 
