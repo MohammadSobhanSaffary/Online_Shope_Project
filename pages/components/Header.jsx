@@ -72,7 +72,7 @@ function Header() {
 
 
 
-            <div className='flex flex-col  md:hidden' >
+            <div className='flex flex-col  md:hidden overflow-y-hidden' >
                 <div className='w-screen  flex  items-center justify-center py-2 px-6   gap-[4rem] bg-[#e4e3e3]  cursor-pointer'>
                     <div className='flex  gap-[20px] justify-center items-center'>
                         <BsSearch className=' w-[30px] h-[30px] cursor-pointer' fill='#575563 ' />
@@ -83,11 +83,11 @@ function Header() {
                     <Image src='/menu.svg' width='40px' height='40px' className=' text-[#575563] cursor-pointer ' onClick={() => setToggle(!toggleState)} />
                 </div>
                 {(toggleState) ?
-                    <div className='flex flex-row-reverse justify-between w-[100vw] h-[100vh] duration-200   bg-[rgba(0,0,0,0.30)]' >
+                    <div className='flex flex-row-reverse justify-between w-[100vw] h-[100vh] duration-200   bg-[rgba(0,0,0,0.025)]' >
                         <div className='w-[80vw] h-[100vh]  bg-[#575563]  flex flex-col  '>
                             <div className='menuItems border-t-0 p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer'>
-                                <CgProfile className=' w-[50px] h-[50px] text-[#ffffff]  cursor-pointer' />
-                                <span className='text-[22px] text-white'>پروفایل</span>
+                                <CgProfile className=' w-[40px] h-[40px] text-[#ffffff]  cursor-pointer' />
+                                <span className='text-[20px] text-white'>پروفایل</span>
 
                             </div>
 
@@ -100,18 +100,18 @@ function Header() {
                                 </div>
                             ))}
                         </div>
-                        <AiOutlineClose className='w-10 h-10  duration-200 m-3' fill='#ffffff' onClick={()=>setToggle(false)} />
+                        {/* <AiOutlineClose className='w-8 h-8  duration-200 ' fill='#575563' onClick={()=>setToggle(false)} /> */}
                     </div>
                     : null
                 }
             </div>
-
-
-
         </>
 
     )
 }
+
+
+
 
 
 
