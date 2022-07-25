@@ -1,9 +1,14 @@
-import Header from "./components/header";
+import Header from "../components/Header";
+import Main from "./layout/Main";
+
+
 
 export default function Home() {
   return (
-    <Header/> 
+<Main>
+  <div>salam chetori</div>
+</Main>
   )
 }
-
+ 
 
