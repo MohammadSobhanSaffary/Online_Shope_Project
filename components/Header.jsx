@@ -78,9 +78,11 @@ function Header() {
                     <Image src='/menu.svg' width='40px' height='40px' className=' text-[#575563] cursor-pointer ' onClick={() => setToggle(!toggleState)} />
                 </div>
                 {(toggleState) ?
-                    <div className='flex flex-row-reverse justify-between w-[100vw] h-[100vh] duration-200   bg-[rgba(0,0,0,0.025)]' >
-                        <div className='w-[80vw] h-[100vh]  bg-[#575563]  flex flex-col  '>
-                            <div className='menuItems border-t-0 p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer'>
+                    <div className='flex flex-row-reverse justify-between w-[100vw] h-[100vh] duration-200    bg-[rgba(0,0,0,0.2)]' id='menuContainer' onClick={(e)=>{
+                       (e.target.id==='menuContainer')?setToggle(false):'';
+                    }}>
+                        <div className='w-[80vw] h-[100vh]  bg-[#575563]  flex flex-col  ' >
+                            <div className='menuItems border-t-0 p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer' >
                                 <CgProfile className=' w-[40px] h-[40px] text-[#ffffff]  cursor-pointer' />
                                 <span className='text-[20px] text-white'>پروفایل</span>
 

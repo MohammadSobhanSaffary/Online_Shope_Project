@@ -1,11 +1,14 @@
 import React from 'react'
+import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 
-function Main({childeren}) {
+function Main( {childeren}) {
   return (
-      <Header/>
+    <>
+      <Header />
       {childeren}
-      <Footer/>
+      <Footer />
+    </>
   )
 }
 
