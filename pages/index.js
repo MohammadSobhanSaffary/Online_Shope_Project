@@ -8,7 +8,7 @@ export default function Home() {
   return (
 
     <Main>
-      salam
+     <p className="text-white">chekhabre ha</p>
     </Main>
 
   )

@@ -9,7 +9,7 @@ import { setValidation } from '../../redux/slices/slcie';
 function Login() {
     const router = useRouter();
     const dispatch=useDispatch();
-   
+   console.log(router)
 
 
     const [state, setState] = useState({
