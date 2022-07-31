@@ -2,15 +2,15 @@
     "admins": [
         {
             "userName": "sobhan",
-            "passwoed": "138112345",
+            "password": "138112345"
         },
         {
             "userName": "sajjad",
-            "passwoed": "6731",
+            "password": "6731"
         },
         {
             "userName": "mostafa",
-            "passwoed": "02010",
+            "password": "02010"
         }
     ],
     "products": [

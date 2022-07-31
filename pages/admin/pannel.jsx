@@ -3,26 +3,28 @@ import React from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 
 function Pannel() {
-  const isValied = useSelector(state => state.loginValidiation.value);
-  
-   if(isValied) return (
+  const isValied = useSelector(state => state.isLoginValied.value);
+  const dispatch = useDispatch();
+  if (isValied) return (
 
-      <div>پنل</div>
-    )
-    
-    
-    
-      else {
+    <div>
+      <table></table>
+    </div>
+  )
+
+
+
+  else {
 
     return (
-      <div>
-        <Link href='/admin/Login'>
-          <span>برای ورود به صفحه ادمین کلیک کنید</span>
+      <div className='w-screen h-screen flex justify-center items-center'>
+        <Link href='/admin/Login' >
+          <span className='cursor-pointer w-[20%] h-14 flex justify-center items-center text-center p-10 border-[2px] border-[#00B5CC] text-blue-500'>برای ورود به صفحه ادمین کلیک کنید</span>
         </Link>
       </div >
     )
-}
-  
+  }
+
 }
 
 export default Pannel

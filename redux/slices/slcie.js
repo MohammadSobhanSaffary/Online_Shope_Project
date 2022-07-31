@@ -7,9 +7,9 @@ const slice=createSlice({
     },
     reducers:{
         setValidation:(state,action)=>{
-            state.isValid=action.payload;
+            state.isLoginValid=action.payload;
         }
     }
 })
-export  const {setValidation};
+export const {setValidation}=slice.actions;
 export default slice.reducer;

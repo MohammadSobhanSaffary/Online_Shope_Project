@@ -1,7 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
-import loginValidiation from '/slices/slice';
+import loginValidation from './slices/slcie';
 export const store=configureStore({
     reducer:{
-        loginValidiation:isLoginValied,
+        isLoginValied:    loginValidation,
     }
 })
