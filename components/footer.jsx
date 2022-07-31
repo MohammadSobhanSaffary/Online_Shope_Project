@@ -3,13 +3,13 @@ import React from 'react'
 
 function Footer() {
   return (
-    <div className='w-[100vw] h-[max-content] bg-[#575563] flex justify-between '>
+    <div className='w-[100%] h-[max-content] bg-[#575563] md:flex justify-between sm:hidden hidden '>
       <div className='w-[50%] flex flex-col justify-center items-center p-3 gap-3'>
         <Image src='/etemad.jpg' width='500px' height='250px' />
         <p className='text-lg text-center'>.سایت مورد نظر در سال 1401  تاسیس شده و کلیه حقوق آن   برای زی نفعان محفوظ است</p>
         <span className='text-lg'>©2022</span>
       </div>
-      <div className='w-[50%] h-[100%] flex justify-center items-center'>
+      <div className='w-[50%]  flex justify-center items-center p-3'>
 
         <div className='flex flex-col  gap-16 p-4 items-end '>
 
@@ -52,6 +52,14 @@ function Footer() {
       </div>
 
     </div>
+
+    //mobile design
+
+
+
+
+
+    
   )
 }
 
