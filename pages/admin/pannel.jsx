@@ -5,9 +5,11 @@ import { useDispatch, useSelector } from 'react-redux'
 function Pannel() {
   const isValied = useSelector(state => state.isLoginValied.value);
   const dispatch = useDispatch();
+  console.log(isValied)
   if (isValied) return (
 
     <div>
+      سلام
       <table></table>
     </div>
   )

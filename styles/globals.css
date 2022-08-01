@@ -35,7 +35,7 @@ body {
   border-top: 1px solid #747380;
   border-bottom: 1px solid #747380;
 }
-.menuItems:hover,:focus{
+.menuItems:hover,.menuItems:focus{
   background-color: #00B5CC;
   border-radius: 3px;
 

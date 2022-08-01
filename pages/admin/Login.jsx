@@ -9,26 +9,28 @@ import { setValidation } from '../../redux/slices/slcie';
 function Login() {
     const router = useRouter();
     const dispatch=useDispatch();
-   console.log(router)
+  
 
 
     const [state, setState] = useState({
         userName: "",
         password: "",
-        validation: ""
+        validation: ".."
     });
 
 
     const handleClick = (e) => {
-        e.preventDefault()
-        let validation = data.admins.map(el => (el.userName === state.userName && el.passWord === state.password))
-        if (validation) {
+        e.preventDefault();
+        let validation = data.admins.filter(el =>(( el.userName === state.userName && el.passWord === state.password)?true:false))
+        if (!validation.lenght) {
+            console.log('salam')
             setState({
                 userName: state.userName,
                 password: state.password,
                 validation: true
             });
              dispatch(setValidation(true));
+               router.push('/admin/Pannel');
         }
         else {
             setState({
@@ -37,7 +39,7 @@ function Login() {
                 validation: false
             });  
             dispatch(setValidation(false));
-            router.pathname='/admin/Pannel';
+          
         }
 
 
@@ -52,17 +54,20 @@ function Login() {
                     <div className=' flex justify-end p5'>
                         <div className='flex flex-col justify-center items-center gap-2 w-[90%]'>
                             <CgProfile className=' w-20 h-20 mt-[1rem] text-[#00B5CC]' />
-                            {(state.validation) ? <i className='text-red-500 text-center text-lg'>اطلاعات ورودی شما صحیح نمی باشد</i> : ''}
+                            <i  className={(state.validation) ?'hidden':'text-red-500 text-center text-lg'  }>اطلاعات ورودی شما صحیح نمی باشد</i>
                         </div>
 
                         <Link href='/'>
                             <AiOutlineClose className='w-7 h-7 cursor-pointer' fill='#00B5CC' />
                         </Link>
                     </div>
+
+
+
                     <form className='  flex flex-col gap-[4rem] ' onSubmit={(e)=>handleClick(e)}>
                         <div className='flex flex-row-reverse  gap-[1.8rem] '>
                             <label className='text-[#00b5cc]' >:نام کاربری</label>
-                            <input className='border-[2px] border-[#00b5cc] w-[250px] h-[40px]  rounded-lg  text-right p-3 text-base outline-none fovous:bg-white ' onChange={(e) => setState(
+                            <input className='border-[2px]  border-[#00b5cc]  w-[250px] h-[40px]  rounded-lg  text-right p-3 text-base outline-none focous:bg-[#fff] ' onChange={(e) => setState(
                                 {
                                     userName: e.target.value,
                                     passWord: state.password,
@@ -82,6 +87,9 @@ function Login() {
                         </div>
                         <button className='bg-[#00b5cc] text-white border-[2px] border-[#00b5cc] w-[250px] h-[40px] self-center rounded-lg  mr-8' >ورود به اکانت</button>
                     </form>
+
+
+
                 </div>
             </div>
 

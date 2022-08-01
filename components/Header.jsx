@@ -52,7 +52,7 @@ function Header() {
                     <span className='rounded-[50%] w-[70px] h-[70px] bg-[#00B5CC] text-white text-sm  flex justify-center items-center text-center p-5 '>لوگوی فروشگاه</span>
                 </div>
 
-                <div className=' flex w-screen h-[60px] bg-[#575563] flex flex-row-reverse text-white justify-center '>
+                <div className=' flex w-screen h-[60px] bg-[#575563]  flex-row-reverse text-white justify-center '>
                     {items.map(e => (
 
                         <div className='headerItems p-3  items-center flex flex-row-reverse  gap-5 cursor-pointer'>
