@@ -1,6 +1,6 @@
 
 
-import Slider from "../components/Slider";
+import Slider from "../components/Slider1";
 import Main from "./layout/Main";
 
 
