@@ -9,12 +9,12 @@ export default function Home() {
   return (
 
     <Main>
-      {/* {/* <div className=" grid grid-cols-12"> */}
-        {/* <div ></div> */}
-          <div > 
+        <div className=" grid grid-cols-12">
+         <div ></div> 
+          <div className="col-span-12"> 
           <Slider1/>
          </div>
-      {/* </div> */} 
+       </div> 
 
     </Main>
 

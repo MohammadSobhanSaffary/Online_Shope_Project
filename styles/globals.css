@@ -1,12 +1,12 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
- 
-@font-face{
-  font-family:'IRANYekan' ;
-  src:url('../public/1FDCADEC.TTF' );
-  
- 
+
+@font-face {
+  font-family: 'IRANYekan';
+  src: url('../public/1FDCADEC.TTF');
+
+
 }
 
 
@@ -14,36 +14,43 @@ html,
 body {
   padding: 0;
   margin: 0;
- font-family: 'IRANYekan';
+  font-family: 'IRANYekan';
 }
 
 * {
   box-sizing: border-box;
 }
 
-.headerItems{
+.headerItems {
   border-left: 1px solid #747380;
   border-right: 1px solid #747380;
 }
-.headerItems:hover{
+
+.headerItems:hover {
   background-color: #00B5CC;
   height: 65px;
   border-radius: 3px;
 }
 
-.menuItems{
+.menuItems {
   border-top: 1px solid #747380;
   border-bottom: 1px solid #747380;
 }
-.menuItems:hover,.menuItems:focus{
+
+.menuItems:hover,
+.menuItems:focus {
   background-color: #00B5CC;
   border-radius: 3px;
 
 }
-.slide1{
-  background: url("https://dkstatics-public.digikala.com/digikala-adservice-banners/b96f685f1e353433d6f8df0413066f45e0def1aa_1659379523.jpg?x-oss-process=image/quality,q_95") no-repeat fixed  center;
-  background-size:auto;
+
+.slide1 {
+  background: url("https://dkstatics-public.digikala.com/digikala-adservice-banners/b96f685f1e353433d6f8df0413066f45e0def1aa_1659379523.jpg?x-oss-process=image/quality,q_95") no-repeat fixed center;
+  background-size: auto;
 }
-.slide2{
-  background: url("https://cdnghesticlub.com/froala/05e368281af5aeSNOWA-Home-Appliance-List1.jpg") no-repeat fixed center;
+
+.slide2 {
+  background: url("https://cdnghesticlub.com/froala/05e368281af5aeSNOWA-Home-Appliance-List1.jpg") no-repeat fixed ;
+  background-position: left;
+  background-size: 60%;
 }

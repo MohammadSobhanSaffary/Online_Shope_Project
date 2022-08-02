@@ -35,10 +35,17 @@ export default () => {
             </SwiperSlide>
 
             <SwiperSlide>
-                <div className='slide2 w-screen h-[28rem] '>
-                    <p>برای مشاهده لوازم خانگی فروشگاه کلیک کنید
+                <div className='slide2 w-screen h-[28rem]  flex flex-col justify-center items-end pr-10'>
+                    <div className='flex flex-col justify-center gap-4 items-center'>
+                        <p className='text-2xl pr-20'>برای مشاهده لوازم خانگی فروشگاه کلیک کنید
+                        </p>
 
-                    </p>
+                        <Link href='/'>
+                            <button className='rounded-[50%] w-16 h-16 text-xl bg-gray-500 text-white cursor-pointer'>
+                                اینجا
+                            </button>
+                        </Link>
+                    </div>
                 </div>
             </SwiperSlide>
             <SwiperSlide>
