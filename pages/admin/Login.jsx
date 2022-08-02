@@ -2,14 +2,14 @@ import React, { useState } from 'react'
 import { CgProfile } from 'react-icons/cg';
 import { AiOutlineClose } from 'react-icons/ai';
 import Link from 'next/link';
-import data from '../../db.json'
 import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
-import { setValidation } from '../../redux/slices/slcie';
-function Login() {
+import { setValidation } from '../../redux/slices/adminValidation';
+function Login({ data }) {
+
     const router = useRouter();
-    const dispatch=useDispatch();
-  
+    const dispatch = useDispatch();
+
 
 
     const [state, setState] = useState({
@@ -21,25 +21,28 @@ function Login() {
 
     const handleClick = (e) => {
         e.preventDefault();
-        let validation = data.admins.filter(el =>(( el.userName === state.userName && el.passWord === state.password)?true:false))
-        if (!validation.lenght) {
-            console.log('salam')
+        let validation = data.filter(el => ((el.userName === state.userName && el.passWord === state.password) ? true : false))
+      
+        if (!!validation.length) {
+
             setState({
                 userName: state.userName,
                 password: state.password,
                 validation: true
             });
-             dispatch(setValidation(true));
-               router.push('/admin/Pannel');
+            dispatch(setValidation(true));
+            router.push('/admin/Pannel');
         }
+
+
         else {
             setState({
                 userName: state.userName,
                 password: state.password,
                 validation: false
-            });  
+            });
             dispatch(setValidation(false));
-          
+
         }
 
 
@@ -54,7 +57,7 @@ function Login() {
                     <div className=' flex justify-end p5'>
                         <div className='flex flex-col justify-center items-center gap-2 w-[90%]'>
                             <CgProfile className=' w-20 h-20 mt-[1rem] text-[#00B5CC]' />
-                            <i  className={(state.validation) ?'hidden':'text-red-500 text-center text-lg'  }>اطلاعات ورودی شما صحیح نمی باشد</i>
+                            <i className={(state.validation) ? 'hidden' : 'text-red-500 text-center text-lg'}>اطلاعات ورودی شما صحیح نمی باشد</i>
                         </div>
 
                         <Link href='/'>
@@ -64,7 +67,7 @@ function Login() {
 
 
 
-                    <form className='  flex flex-col gap-[4rem] ' onSubmit={(e)=>handleClick(e)}>
+                    <form className='  flex flex-col gap-[4rem] ' onSubmit={(e) => handleClick(e)}>
                         <div className='flex flex-row-reverse  gap-[1.8rem] '>
                             <label className='text-[#00b5cc]' >:نام کاربری</label>
                             <input className='border-[2px]  border-[#00b5cc]  w-[250px] h-[40px]  rounded-lg  text-right p-3 text-base outline-none focous:bg-[#fff] ' onChange={(e) => setState(
@@ -105,7 +108,16 @@ export default Login
 
 
 
-
+export async function getStaticProps({ params }) {
+    console.log(params)
+    const res = await fetch(` http://localhost:4000/admins`)
+    const data = await res.json()
+    return {
+        props: {
+            data,
+        }
+    }
+}
 
 
 
