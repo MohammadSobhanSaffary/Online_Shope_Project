@@ -7,6 +7,7 @@ import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
+import Link from 'next/link';
 
 export default () => {
     return (
@@ -17,15 +18,36 @@ export default () => {
             spaceBetween={50}
             slidesPerView={1}
             navigation
-            pagination={{ clickable: true }}    
+            pagination={{ clickable: true }}
+            loop={true}
+            autoplay={{
+                delay: 300,
+                disableOnInteraction: false,
+            }}
+
         >
             <SwiperSlide>
-                <div className='h-60'>hello</div>
-                </SwiperSlide>
-            <SwiperSlide>Slide 2</SwiperSlide>
-            <SwiperSlide>Slide 3</SwiperSlide>
-            <SwiperSlide>Slide 4</SwiperSlide>
-            ...
+                <Link href='/categories/digital'>
+                    <div className='h-[28rem] w-screen slide1'>
+                    </div>
+                </Link>
+
+            </SwiperSlide>
+
+            <SwiperSlide>
+                <div className='slide2 w-screen h-[28rem] '>
+                    <p>برای مشاهده لوازم خانگی فروشگاه کلیک کنید
+
+                    </p>
+                </div>
+            </SwiperSlide>
+            <SwiperSlide>
+                sss
+            </SwiperSlide>
+            <SwiperSlide>
+                ssss
+            </SwiperSlide>
+
         </Swiper>
 
     );

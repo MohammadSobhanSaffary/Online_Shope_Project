@@ -40,3 +40,10 @@ body {
   border-radius: 3px;
 
 }
+.slide1{
+  background: url("https://dkstatics-public.digikala.com/digikala-adservice-banners/b96f685f1e353433d6f8df0413066f45e0def1aa_1659379523.jpg?x-oss-process=image/quality,q_95") no-repeat fixed  center;
+  background-size:auto;
+}
+.slide2{
+  background: url("https://cdnghesticlub.com/froala/05e368281af5aeSNOWA-Home-Appliance-List1.jpg") no-repeat fixed center;
+}

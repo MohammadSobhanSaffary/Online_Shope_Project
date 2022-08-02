@@ -18,82 +18,175 @@
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "لوازم دیجیتال",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "لوازم دیجیتال",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "لوازم دیجیتال",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "لوازم دیجیتال",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "لوازم دیجیتال",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "لوازم دیجیتال",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "لوازم دیجیتال",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photoMain": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
+            
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "مواد غذایی",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         },
         {
             "name": "",
             "full name": "",
             "id": "",
-            "categori": "",
+            "categori": "مواد غذایی",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
+        }
+        ,
+        {
+            "name": "",
+            "full name": "",
+            "id": "",
+            "categori": "مواد غذایی",
+            "availeblity": "",
+            "informations": "",
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
+        }
+    ,
+        {
+            "name": "",
+            "full name": "",
+            "id": "",
+            "categori": "مواد غذایی",
+            "availeblity": "",
+            "informations": "",
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
+        }
+        ,
+        {
+            "name": "",
+            "full name": "",
+            "id": "",
+            "categori": "مواد غذایی",
+            "availeblity": "",
+            "informations": "",
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
+        }
+        ,
+        {
+            "name": "",
+            "full name": "",
+            "id": "",
+            "categori": "مواد غذایی",
+            "availeblity": "",
+            "informations": "",
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         }
         ,
         {
@@ -103,7 +196,11 @@
             "categori": "",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         }
         ,
         {
@@ -113,7 +210,11 @@
             "categori": "",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         }
         ,
         {
@@ -123,7 +224,11 @@
             "categori": "",
             "availeblity": "",
             "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         }
         ,
         {
@@ -133,47 +238,11 @@
             "categori": "",
             "availeblity": "",
             "informations": "",
-            "photo": ""
-        }
-        ,
-        {
-            "name": "",
-            "full name": "",
-            "id": "",
-            "categori": "",
-            "availeblity": "",
-            "informations": "",
-            "photo": ""
-        }
-        ,
-        {
-            "name": "",
-            "full name": "",
-            "id": "",
-            "categori": "",
-            "availeblity": "",
-            "informations": "",
-            "photo": ""
-        }
-        ,
-        {
-            "name": "",
-            "full name": "",
-            "id": "",
-            "categori": "",
-            "availeblity": "",
-            "informations": "",
-            "photo": ""
-        }
-        ,
-        {
-            "name": "",
-            "full name": "",
-            "id": "",
-            "categori": "",
-            "availeblity": "",
-            "informations": "",
-            "photo": ""
+            "photo": "",
+            "parent":"",
+            "best":"",
+            "new":"",
+            "off":""
         }
     ]
 }
