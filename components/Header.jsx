@@ -40,19 +40,19 @@ function Header() {
 
         <>
             <div className='hidden md:flex flex-col'>
-                <div className=' flex  items-center justify-center   w-screen    gap-[10%] p-[5px]'>
+                <div className=' flex  items-center justify-center   w-full    gap-[10%] p-[5px]'>
                     <div className='flex gap-[40px]'>
                         <CgProfile className=' w-[50px] h-[50px] text-[#575563]  cursor-pointer' />
                         <BsCart3 className=' w-[40px] h-[40px] cursor-pointer ' fill='#575563' />
                     </div>
-                    <div className='flex items-center border-[2px] border-cyan-800  cursor-pointer   w-[400px] h-[45px] p-[20px] rounded-md justify-between'>
+                    <div className='flex items-center border-[2px] border-cyan-800  cursor-pointer   w-[25%] h-[45px] p-[20px] rounded-md justify-between'>
                         <BsSearch className=' w-[25px] h-[25px] ' fill='#575563' />
                         <input type='text' className='border-0 outline-0  w-[300px] text-right' placeholder='جست وجوی محصول' />
                     </div>
                     <span className='rounded-[50%] w-[70px] h-[70px] bg-[#00B5CC] text-white text-sm  flex justify-center items-center text-center p-5 '>لوگوی فروشگاه</span>
                 </div>
 
-                <div className=' flex w-screen h-[60px] bg-[#575563]  flex-row-reverse text-white justify-center '>
+                <div className=' flex w-full h-[60px] bg-[#575563]  flex-row-reverse text-white justify-center '>
                     {items.map(e => (
 
                         <div className='headerItems p-3  items-center flex flex-row-reverse  gap-5 cursor-pointer'>
@@ -68,7 +68,7 @@ function Header() {
             {/*  mobile header */}
 
          <div className='flex flex-col  md:hidden overflow-y-hidden' >
-                <div className='w-screen  flex  items-center justify-center py-2 px-6   gap-[4rem] bg-[#e4e3e3]  cursor-pointer'>
+                <div className='w-full  flex  items-center justify-center py-2 px-6   gap-[4rem] bg-[#e4e3e3]  cursor-pointer'>
                     <div className='flex  gap-[20px] justify-center items-center'>
                         <BsSearch className=' w-[30px] h-[30px] cursor-pointer' fill='#575563 ' />
                         <BsCart3 className=' w-[30px] h-[30px] cursor-pointer text-[#575563] ' fill='#575563' />
@@ -78,7 +78,7 @@ function Header() {
                     <Image src='/menu.svg' width='40px' height='40px' className=' text-[#575563] cursor-pointer ' onClick={() => setToggle(!toggleState)} />
                 </div>
                 {(toggleState) ?
-                    <div className='flex flex-row-reverse justify-between w-[100vw] h-[100vh] duration-200    bg-[rgba(0,0,0,0.2)]' id='menuContainer' onClick={(e)=>{
+                    <div className='flex flex-row-reverse justify-between w-full h-full duration-200    bg-[rgba(0,0,0,0.2)]' id='menuContainer' onClick={(e)=>{
                        (e.target.id==='menuContainer')?setToggle(false):'';
                     }}>
                         <div className='w-[80vw] h-[100vh]  bg-[#575563]  flex flex-col  ' >

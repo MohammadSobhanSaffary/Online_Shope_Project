@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 import { setValidation } from '../../redux/slices/adminValidation';
 function Login({ data }) {
-
+ console.log(data)
     const router = useRouter();
     const dispatch = useDispatch();
 
@@ -109,7 +109,7 @@ export default Login
 
 
 export async function getStaticProps({ params }) {
-    console.log(params)
+
     const res = await fetch(` http://localhost:4000/admins`)
     const data = await res.json()
     return {

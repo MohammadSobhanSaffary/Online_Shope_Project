@@ -1,4 +1,4 @@
-import { Navigation, Pagination, Scrollbar, A11y } from 'swiper';
+import  SwiperCore,{ Navigation, Pagination, Scrollbar, A11y,Autoplay } from 'swiper';
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 
@@ -9,26 +9,28 @@ import 'swiper/css/pagination';
 import 'swiper/css/scrollbar';
 import Link from 'next/link';
 
-export default () => {
+const Slider1=() => {
+    SwiperCore.use([Autoplay])
     return (
 
         <Swiper
             // install Swiper modules
             modules={[Navigation, Pagination, A11y]}
+            Sw
             spaceBetween={50}
             slidesPerView={1}
             navigation
             pagination={{ clickable: true }}
             loop={true}
             autoplay={{
-                delay: 300,
+                delay:2000,
                 disableOnInteraction: false,
             }}
 
         >
             <SwiperSlide>
                 <Link href='/categories/digital'>
-                    <div className='h-[28rem] w-screen slide1'>
+                    <div className='h-[28rem]  slide1'>
                     </div>
                 </Link>
 
@@ -48,14 +50,18 @@ export default () => {
                     </div>
                 </div>
             </SwiperSlide>
+
+
             <SwiperSlide>
-                sss
+            <div className='h-[28rem]  slide3'>
+                    </div>
             </SwiperSlide>
             <SwiperSlide>
-                ssss
+                
             </SwiperSlide>
 
         </Swiper>
 
     );
 };
+export default Slider1

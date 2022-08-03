@@ -5,7 +5,7 @@ import Header from '../../components/Header'
 function Main( {children}) {
   return (
     <Fragment >
-      <div className='w-[100vw] h-[100vh] flex flex-col justify-between '>
+      <div className='w-full h-full flex flex-col justify-between '>
       <Header />
       {children}
       <Footer />
