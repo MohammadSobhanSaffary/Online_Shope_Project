@@ -21,7 +21,9 @@ body {
 * {
   box-sizing: border-box;
 }
-
+.rtl{
+  direction: rtl;
+}
 .headerItems {
   border-left: 1px solid #747380;
   border-right: 1px solid #747380;
@@ -54,4 +56,21 @@ body {
   background: url("https://cdnghesticlub.com/froala/05e368281af5aeSNOWA-Home-Appliance-List1.jpg") no-repeat fixed ;
   background-position: left;
   background-size: 60%;
+}
+.slide3{
+  background: url('../public/food.jpg') no-repeat  fixed left;
+ background-color: rgb(235,234,229);
+ background-size: 50٪;
+ 
+}
+@media only screen and (max-width: 1400px) {
+  .slide3{
+    background-position: center;
+    background-size: 60%;
+  }
+}
+.slide4{
+  background: url('../public/makeup.jpg') no-repeat fixed  center;
+  background-size: 60%;
+  background-color: #2F2331;
 }

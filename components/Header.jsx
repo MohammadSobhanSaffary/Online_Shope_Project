@@ -3,6 +3,7 @@ import Image from 'next/image';
 import { CgProfile, CgMenu } from 'react-icons/cg';
 import { BsCart3, BsSearch } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
+import Link from 'next/link';
 
 
 function Header() {
@@ -13,27 +14,33 @@ function Header() {
     const items = [
         {
             name: 'همه محصولات',
-            svg: '/all.svg'
+            svg: '/all.svg',
+            href: "/"
         },
         {
             name: 'لوازم دیجیتال',
-            svg: '/phone.svg'
+            svg: '/phone.svg',
+            href: "/categories/digital-tools"
         },
         {
             name: 'لوازم خانگی',
-            svg: '/refrigator.svg'
+            svg: '/refrigator.svg',
+            href: "/categories/furniture"
         },
         {
             name: 'لوازم تحریر',
-            svg: '/pen.svg'
+            svg: '/pen.svg',
+            href: "/categories/stationery"
         },
         {
             name: 'محصولات بهداشتی',
-            svg: '/hygiene.svg'
+            svg: '/hygiene.svg',
+            href: "/categories/health"
         },
         {
             name: 'محصولات غذایی',
-            svg: '/apple.svg'
+            svg: '/apple.svg',
+            href: "/categories/foods"
         }];
 
     return (
@@ -54,11 +61,12 @@ function Header() {
 
                 <div className=' flex w-full h-[60px] bg-[#575563]  flex-row-reverse text-white justify-center '>
                     {items.map(e => (
-
-                        <div className='headerItems p-3  items-center flex flex-row-reverse  gap-5 cursor-pointer'>
-                            <span >{e.name}</span>
-                            <Image src={e.svg} width='30' height='30' alt={e.name} />
-                        </div>
+                        <Link href={e.href}>
+                            <div className='headerItems p-3  items-center flex flex-row-reverse  gap-5 cursor-pointer'>
+                                <span >{e.name}</span>
+                                <Image src={e.svg} width='30' height='30' alt={e.name} />
+                            </div>
+                        </Link>
                     ))}
 
                 </div>
@@ -67,7 +75,7 @@ function Header() {
 
             {/*  mobile header */}
 
-         <div className='flex flex-col  md:hidden overflow-y-hidden' >
+            <div className='flex flex-col  md:hidden overflow-y-hidden' >
                 <div className='w-full  flex  items-center justify-center py-2 px-6   gap-[4rem] bg-[#e4e3e3]  cursor-pointer'>
                     <div className='flex  gap-[20px] justify-center items-center'>
                         <BsSearch className=' w-[30px] h-[30px] cursor-pointer' fill='#575563 ' />
@@ -78,8 +86,8 @@ function Header() {
                     <Image src='/menu.svg' width='40px' height='40px' className=' text-[#575563] cursor-pointer ' onClick={() => setToggle(!toggleState)} />
                 </div>
                 {(toggleState) ?
-                    <div className='flex flex-row-reverse justify-between w-full h-full duration-200    bg-[rgba(0,0,0,0.2)]' id='menuContainer' onClick={(e)=>{
-                       (e.target.id==='menuContainer')?setToggle(false):'';
+                    <div className='flex flex-row-reverse justify-between w-full h-full duration-200    bg-[rgba(0,0,0,0.2)]' id='menuContainer' onClick={(e) => {
+                        (e.target.id === 'menuContainer') ? setToggle(false) : '';
                     }}>
                         <div className='w-[80vw] h-[100vh]  bg-[#575563]  flex flex-col  ' >
                             <div className='menuItems border-t-0 p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer' >
@@ -111,7 +119,7 @@ export default Header
 
 
 
-   
+
 
 
 

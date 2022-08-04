@@ -17,7 +17,7 @@ export default categories
 
 
 export async function getStaticPaths() {
-  const categories = ["1", "2", "4", "5", "6"]
+  const categories = ["foods ", "health ","stationery ", "furniture",  "difital-tools"]
   
   const categoryPaths = categories.map(item => {
     return {
@@ -27,7 +27,7 @@ export async function getStaticPaths() {
     }
   })
 
-  console.log(categoryPaths)
+  
     return {
       paths:categoryPaths,
       fallback: false,
@@ -36,8 +36,8 @@ export async function getStaticPaths() {
   
 
 export async function getStaticProps({params}) {
-  console.log(params)
-    const res = await fetch(`https://jsonplaceholder.typicode.com/posts/${params.categories}`)
+
+    const res = await fetch(`http://localhost:4000/products`)
   const data = await res.json()
     return{
       props:{
