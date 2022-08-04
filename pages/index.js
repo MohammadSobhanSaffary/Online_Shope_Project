@@ -21,7 +21,7 @@ export default function Home({ data }) {
 
       <div className="  grid grid-cols-12   ">
       <div className="col-span-1 mt-16 mr-1- ">
-          <div className='flex flex-col justify-between items-center p-3 rounded-l-md bg-gray-500  h-[28rem]'>
+          <div className='flex flex-col justify-center gap-10 items-center p-3 rounded-l-md bg-gray-500  h-[28rem]'>
             <Image src={box} />
             <span className="text-white text-2xl pb-5">برترین ها</span>
 
@@ -33,7 +33,7 @@ export default function Home({ data }) {
         </div>
 
         <div className="col-span-1 mt-16 ml-1 ">
-          <div className='flex flex-col justify-between items-center p-3 rounded-r-md bg-gray-500  h-[28rem]'>
+          <div className='flex flex-col justify-center gap-10 items-center p-3 rounded-r-md bg-gray-500  h-[28rem]'>
             <Image src={box} />
             <span className="text-white text-2xl pb-5">برترین ها</span>
 
@@ -43,7 +43,7 @@ export default function Home({ data }) {
       
       <div className="  grid grid-cols-12   ">
       <div className="col-span-1 mt-16 mr-1- ">
-          <div className='flex flex-col justify-between items-center p-3 rounded-l-md bg-gray-500  h-[28rem]'>
+          <div className='flex flex-col justify-center gap-10 items-center p-3 rounded-l-md bg-gray-500  h-[28rem]'>
             <Image src={box} />
             <span className="text-white text-2xl pb-5">جدیدترین ها</span>
 
@@ -55,7 +55,7 @@ export default function Home({ data }) {
         </div>
 
         <div className="col-span-1 mt-16 ml-1 ">
-          <div className='flex flex-col justify-between items-center p-2 rounded-r-md bg-gray-500  h-[28rem]'>
+          <div className='flex flex-col justify-center gap-10 items-center p-2 rounded-r-md bg-gray-500  h-[28rem]'>
             <Image src={box} />
             <span className="text-white text-2xl pb-5">جدیدترین ها</span>
 

@@ -6,7 +6,7 @@ import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 import { setValidation } from '../../redux/slices/adminValidation';
 function Login({ data }) {
- console.log(data)
+
     const router = useRouter();
     const dispatch = useDispatch();
 

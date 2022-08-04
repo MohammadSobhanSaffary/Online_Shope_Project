@@ -48,7 +48,7 @@ function Header() {
         <>
             <div className='hidden md:flex flex-col'>
                 <div className=' flex  items-center justify-center   w-full    gap-[10%] p-[5px]'>
-                    <div className='flex gap-[40px]'>
+                    <div className='flex gap-[40px] '>
                         <CgProfile className=' w-[50px] h-[50px] text-[#575563]  cursor-pointer' />
                         <BsCart3 className=' w-[40px] h-[40px] cursor-pointer ' fill='#575563' />
                     </div>
