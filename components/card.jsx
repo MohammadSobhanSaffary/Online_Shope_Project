@@ -20,7 +20,7 @@ function Card({ product }) {
                             <span>تومان</span>
                             <span className={(Number(product.off) !== 0) ? 'text-right text-lg self-end font-bold line-through' : 'text-right text-lg self-end font-bold '}>{persianNumber((Number(product.price)))} </span>
                         </div>
-                        {(Number(product.off) !== 0) ? <div className='flex  flex-row-reverse sproductf-start gap-5'> <span className='text-right text-lg sproductf-end font-bold text-[#00B5CC]'>    {persianNumber(Math.floor((Number(product.price) - Number(product.price) * Number(product.off) / 100)))} </span>  <span>تومان</span ></div> : ''}
+                        {(Number(product.off) !== 0) ? <div className='flex  flex-row-reverse sproductf-start gap-5'> <span className='text-right text-lg sproductf-end font-bold text-[#00B5CC]'>    {persianNumber(Math.floor((Number(product.price) - Number(product.price) * Number(product.off) / 100)))} </span>  <span className='text-[#00B5CC]'>تومان</span ></div> : ''}
 
                     </div>
                 </div>

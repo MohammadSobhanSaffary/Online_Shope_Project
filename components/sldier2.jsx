@@ -35,7 +35,7 @@ function Slider2({ data, name }) {
 
         >
 
-            {data.map(el => ((name === 'best') ? el.best === "+" : el.new === "+") ? (
+            {data.map(el => ((name === 'best') ? el.best === "+" : el.new === "1") ? (
 
                 <SwiperSlide key={el.id} >
                     <div className='      h-[26rem] my-20'>

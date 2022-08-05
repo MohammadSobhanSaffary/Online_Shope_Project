@@ -33,9 +33,9 @@ function Header() {
             href: "/categories/stationery"
         },
         {
-            name: 'محصولات بهداشتی',
-            svg: '/hygiene.svg',
-            href: "/categories/health"
+            name: 'لوازم آرایشی',
+            svg: '/makeup.svg',
+            href: "/categories/makeup"
         },
         {
             name: 'محصولات غذایی',
@@ -97,12 +97,13 @@ function Header() {
                             </div>
 
                             {items.map(e => (
+                                <Link href={e.href}>
+                                    <div className='menuItems  p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer text-white' >
+                                        <Image src={e.svg} width='40' height='40' alt={e.name} />
+                                        <span className='text-[18px]'>{e.name}</span>
 
-                                <div className='menuItems  p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer text-white' >
-                                    <Image src={e.svg} width='40' height='40' alt={e.name} />
-                                    <span className='text-[18px]'>{e.name}</span>
-
-                                </div>
+                                    </div>
+                                </Link>
                             ))}
                         </div>
                         {/* <AiOutlineClose className='w-8 h-8  duration-200 ' fill='#575563' onClick={()=>setToggle(false)} /> */}
