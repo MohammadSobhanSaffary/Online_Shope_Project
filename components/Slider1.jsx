@@ -43,7 +43,7 @@ const Slider1 = () => {
                         <p className='text-2xl pr-20'>برای مشاهده لوازم خانگی فروشگاه کلیک کنید
                         </p>
 
-                        <Link href='/furniture'>
+                        <Link href='/categories/furniture'>
                             <button className='rounded-[50%] w-16 h-16 text-xl bg-gray-500 text-white cursor-pointer'>
                                 اینجا
                             </button>
@@ -55,7 +55,7 @@ const Slider1 = () => {
 
 
             <SwiperSlide>
-                <Link href='/'>
+                <Link href='/categories/foods'>
                     <div className='slide3 h-[28rem] flex justify-end items-center z-10 px-10 ml-6'>
                         <div className='hidden 2xl:flex flex-col  items-center  gap-7'>
                             <p className='text-3xl font-extrabold  text-red-600'>انواع خوراکی های خارجی و ایرانی </p>
@@ -70,8 +70,10 @@ const Slider1 = () => {
             </SwiperSlide>
 
             <SwiperSlide>
-                <div className='slide4 h-[28rem]'>
-                </div>
+                <Link href='/categories/makeup'>
+                    <div className='slide4 h-[28rem]'>
+                    </div>
+                </Link>
             </SwiperSlide>
 
         </Swiper>
