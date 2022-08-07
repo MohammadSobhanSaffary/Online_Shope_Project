@@ -5,6 +5,7 @@ import Slider1 from "../components/Slider1";
 import Main from "./layout/Main";
 import box from '../public/box.png';
 import Image from "next/image";
+import axios from 'axios';
 
 
 export default function Home({ data }) {
@@ -64,6 +65,7 @@ export default function Home({ data }) {
       </div>
 
 
+    
 
 
     </Main>
@@ -74,9 +76,9 @@ export default function Home({ data }) {
 
 
 export async function getStaticProps() {
-
-  const res = await fetch(`http://localhost:4000/products`)
-  const data = await res.json()
+  const res = await axios.get(`http://localhost:4000/products`)
+    const data=await res.data;
+  // const data = await res.json()
   return {
     props: {
       data,

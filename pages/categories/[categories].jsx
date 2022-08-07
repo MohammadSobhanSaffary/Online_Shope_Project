@@ -1,8 +1,8 @@
 import Main from "../layout/Main";
 import React, { useEffect, useState } from 'react'
 import Card from "../../components/card";
-
-function categories({ data, params }) {
+import axios from 'axios';
+function categories({ data, params }) {  
   const [state, setstate] = useState(
     {
       products: data.filter(el => el.tag === params.categories),
@@ -141,8 +141,8 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 
-  const res = await fetch(`http://localhost:4000/products`)
-  const data = await res.json()
+   const res = await axios.get(`http://localhost:4000/products`)
+  const data = await res.data
   return {
     props: {
       data,
