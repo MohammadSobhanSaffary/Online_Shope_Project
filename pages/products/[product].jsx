@@ -130,41 +130,7 @@ function Product({ data, params }) {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
 export default Product
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 export async function getStaticPaths() {
     const res = await axios.get(`http://localhost:4000/products`);
     const data = await res.data;
@@ -181,9 +147,6 @@ export async function getStaticPaths() {
         fallback: false,
     }
 }
-
-
-
 export async function getStaticProps({ params }) {
 
     const res = await axios.get(`http://localhost:4000/products`)
@@ -195,3 +158,39 @@ export async function getStaticProps({ params }) {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
