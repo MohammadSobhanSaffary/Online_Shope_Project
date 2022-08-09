@@ -572,9 +572,11 @@
     ],
     "users": [
         {
-            "userName": "ali",
-            "userEmail": "ali@gmail.com",
-            "userPassword": "138112345"
+            "userName": "mss",
+            "fName":"سبحان",
+            "lName":"صفاری",
+            "email": "ali@gmail.com",
+            "password": "138112345"
         }
     ]
 }

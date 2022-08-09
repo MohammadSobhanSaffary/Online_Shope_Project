@@ -1,5 +1,5 @@
 import SwiperCore, { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-import React from 'react';
+import React, { useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 
 // Import Swiper styles
@@ -13,11 +13,18 @@ import Image from 'next/image';
 
 function Slider2({ data, name }) {
 
+    const screenSize = (size) => {
+        return (size < 1400) ? 2 : 5;
+
+    }
+
+
 
     const persianNumber = (x) => {
         return x.toLocaleString("fa-IR");
 
     }
+
 
     return (
 
@@ -27,7 +34,13 @@ function Slider2({ data, name }) {
             modules={[Navigation, Pagination, A11y]}
             Sw
             spaceBetween={50}
-            slidesPerView={4}
+            slidesPerView={4} 
+
+
+
+
+
+
             navigation
             pagination={{ clickable: true }}
             loop={true}
@@ -35,7 +48,7 @@ function Slider2({ data, name }) {
 
         >
 
-            {data.map(el => ((name === 'best') ? el.best === "+" :(name==='new')? el.new === "1" :'') ? (
+            {data.map(el => ((name === 'best') ? el.best === "+" : (name === 'new') ? el.new === "1" : '') ? (
 
                 <SwiperSlide key={el.id} >
                     <div className='      h-[26rem] my-20'>

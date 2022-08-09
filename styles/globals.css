@@ -24,28 +24,17 @@ body {
 .rtl{
   direction: rtl;
 }
-.headerItems {
-  border-left: 1px solid #747380;
-  border-right: 1px solid #747380;
-}
 
-.headerItems:hover {
-  background-color: #00B5CC;
-  height: 65px;
-  border-radius: 3px;
-}
+
+
 
 .menuItems {
   border-top: 1px solid #747380;
   border-bottom: 1px solid #747380;
 }
 
-.menuItems:hover,
-.menuItems:focus {
-  background-color: #00B5CC;
-  border-radius: 3px;
 
-}
+
 
 .slide1 {
   background: url("https://dkstatics-public.digikala.com/digikala-adservice-banners/b96f685f1e353433d6f8df0413066f45e0def1aa_1659379523.jpg?x-oss-process=image/quality,q_95") no-repeat fixed center;

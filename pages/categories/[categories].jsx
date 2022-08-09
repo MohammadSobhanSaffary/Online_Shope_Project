@@ -19,11 +19,11 @@ function categories({ data, params }) {
   }
     , [params.categories]);
 
-
+ 
   return (
-    <Main>
-      <div className='w-full h-full flex flex-col'>
-        <div className='w-full h-20 flex justify-center items-center  gap-40'>
+    <Main select={`/categories/${params.categories}`}>
+      <div className='w-full h-full flex flex-col items-center' >
+        <div className='md:w-[50%] w-full h-20 flex md:justify-between justify-center gap-3 md:gap-0 items-center '>
 
           
           <select className="   w-70 p-3 border-2 border-[#00B5CC] rounded-lg text-end font-semibold appearance-none hover:bg-[#00B5CC] focus:border-[#00B5CC] hover:text-white" onChange={(e) => {

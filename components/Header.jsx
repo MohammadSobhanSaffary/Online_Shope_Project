@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { CgProfile, CgMenu } from 'react-icons/cg';
 import { BsCart3, BsSearch } from 'react-icons/bs';
@@ -6,8 +7,8 @@ import { AiOutlineClose } from 'react-icons/ai';
 import Link from 'next/link';
 
 
-function Header() {
-
+function Header({ select }) {
+ const router=useRouter()
 
 
     const [toggleState, setToggle] = useState(false);
@@ -49,7 +50,7 @@ function Header() {
             <div className='hidden md:flex flex-col'>
                 <div className=' flex  items-center justify-center   w-full    gap-[10%] p-[5px]'>
                     <div className='flex gap-[40px] '>
-                        <CgProfile className=' w-[50px] h-[50px] text-[#575563]  cursor-pointer' />
+                         <CgProfile className=' w-[50px] h-[50px] text-[#575563]  cursor-pointer' onClick={()=>router.push('/authentication/Login')} />
                         <BsCart3 className=' w-[40px] h-[40px] cursor-pointer ' fill='#575563' />
                     </div>
                     <div className='flex items-center border-[2px] border-cyan-800  cursor-pointer   w-[25%] h-[45px] p-[20px] rounded-md justify-between'>
@@ -62,10 +63,12 @@ function Header() {
                 <div className=' flex w-full h-[60px] bg-[#575563]  flex-row-reverse text-white justify-center '>
                     {items.map(e => (
                         <Link href={e.href}>
-                            <div className='headerItems p-3  items-center flex flex-row-reverse  gap-5 cursor-pointer'>
+
+                            <div className={ (select==e.href) ? 'bg-[#00B5CC] rounded-[3px] p-3  items-center flex flex-row-reverse  gap-5 cursor-pointer h-[62px]':'hover:bg-[#00B5CC] hover:rounded-[3px] p-3  items-center flex flex-row-reverse  gap-5 cursor-pointer border-x-[1px] border-[#747380]'}  >
                                 <span >{e.name}</span>
                                 <Image src={e.svg} width='30' height='30' alt={e.name} />
                             </div>
+
                         </Link>
                     ))}
 
@@ -90,10 +93,12 @@ function Header() {
                         (e.target.id === 'menuContainer') ? setToggle(false) : '';
                     }}>
                         <div className='w-[80vw] h-[100vh]  bg-[#575563]  flex flex-col  ' >
-                            <div className='menuItems border-t-0 p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer' >
-                                <CgProfile className=' w-[40px] h-[40px] text-[#ffffff]  cursor-pointer' />
-                                <span className='text-[20px] text-white'>پروفایل</span>
-
+                            <div className='menuItems border-t-0 p-3  items-center flex flex-row-reverse  gap-[20px] cursor-pointer' onClick={()=>router.push('/authentication/Login')}>
+                                    
+                                        <CgProfile className=' w-[40px] h-[40px] text-[#ffffff]  cursor-pointer' />
+                                        <span className='text-[20px] text-white'>پروفایل</span>
+                                    
+                               
                             </div>
 
                             {items.map(e => (

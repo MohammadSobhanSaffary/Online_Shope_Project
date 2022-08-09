@@ -27,11 +27,11 @@ function Product({ data, params }) {
     }, [params.product]);
 
     return (
-        <Main>
+        <Main select={`/categories/${state.product.tag}`}>
             <div className='w-full h-full py-5 '>
 
 
-                <div className='grid grid-cols-12   '>
+                <div className='grid grid-cols-12   px-5'>
                     <div className='col-span-12 md:col-span-8 flex flex-col gap-20 items-center py-5 '>
                         <h1 className='text-3xl font-bold'>{state.product.fullName}</h1>
                         <p className='text-right w-[70%]  break-[5px] text-2xl leading-loose   '>{state.product.informations}</p>

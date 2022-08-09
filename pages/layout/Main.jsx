@@ -2,11 +2,11 @@ import React, { Fragment } from 'react'
 import Footer from '../../components/Footer'
 import Header from '../../components/Header'
 
-function Main( {children}) {
+function Main( {children ,select}) {
   return (
     <Fragment >
       <div className='w-full h-full flex flex-col justify-between '>
-      <Header />
+      <Header select={select} />
       {children}
       <Footer />
       </div>

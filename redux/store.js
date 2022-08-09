@@ -1,10 +1,11 @@
 import { configureStore } from "@reduxjs/toolkit";
+import adminloginValidation from './slices/adminValidation';
+import user from './slices/userLogin';
 
-import loginValidation from './slices/adminValidation';
-import categoriesProduct from './slices/categoriesRender';
-export const store=configureStore({
-    reducer:{
-        isLoginValied:    loginValidation,
-        categoriesProductState : categoriesProduct,
+
+export const store = configureStore({
+    reducer: {
+        isLoginValied: adminloginValidation,
+         UserInfo :user ,
     }
 })
