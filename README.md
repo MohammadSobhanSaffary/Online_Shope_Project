@@ -1,4 +1,4 @@
-# Hi this is Sobhan a progroming and front-end loveer
+# Hi this is Sobhan a progroming and front-end lover
 
 
 
