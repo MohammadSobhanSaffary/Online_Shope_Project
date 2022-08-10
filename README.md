@@ -1,9 +1,19 @@
+# Hi this is Sobhan a progroming and front-end loveer
+
+
+
 ## Shop Project
 ### I used Next.js for this App and I love Next more after do this project with ![NEXT.js](https://lozilearn.com/storage/2021/04/nextjs.png)
 
 ## I use Json Server in my Project and ou can run it easily  read this link for learn work with json Server ![https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+  ## ![](https://static.cdn.asset.aparat.com/avt/44460383-1435-b__4631.jpg)
 
-
+## and used Figma for design 
+![figma](https://play-lh.googleusercontent.com/efwNlvQ3pch_-hZ9xeHf6YF-f_rHzQQo21IVevPLOxpzSVfxuVKom2_7C6axFbC-3rU)
+## and  tailwind is my assistant for styling my Project  ![talwind css](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20211110050115/Tailwind-CSS-Tutorial.png)
+ ## swiper js is my slider library ![swipper js](https://swiperjs.com/images/share-banner-3.png)
+ ## headLess UI is tailwind supplement  and I learn it ![](https://repository-images.githubusercontent.com/295992065/4bd52200-0043-11eb-9711-359a3854d4dc)
+ ## axios is my rest api call helper ![](https://i.morioh.com/201028/78bb1d3b.webp)
 
 
 
