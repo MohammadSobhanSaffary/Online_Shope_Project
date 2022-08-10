@@ -1,4 +1,21 @@
+## Shop Project
+### I used Next.js for this App and I love Next more after do this project with ![NEXT.js](https://lozilearn.com/storage/2021/04/nextjs.png)
+
+## I use Json Server in my Project and ou can run it easily  read this link for learn work with json Server ![https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+
+
+
+
+
+
+
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+
+
+
+
+
 
 ## Getting Started
 
