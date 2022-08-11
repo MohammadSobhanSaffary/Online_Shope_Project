@@ -5,6 +5,7 @@ import Link from 'next/link';
 import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
+import { setUser } from '../../redux/slices/userLogin';
 
 function Login({ data }) {
     const router = useRouter();
@@ -15,40 +16,36 @@ function Login({ data }) {
             userName: '',
             password: ''
         },
-        isInfoValied: '  ',
+        isInfoValied: '',
     });
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log(data);
-        console.log(state)
         data.map(el => {
             if (el.userName === state.user.userName && el.password === state.user.password) {
                 setState({
-                    user: state.user,
-                    isInfoValied: true,
+                  user:el,
+                  isInfoValied:state.isInfoValied
                 })
+                dispatch(setUser(el))
                 router.back();
             }
+            else{
+              null
+            } 
+        }  );
 
-            else {
-                setState({
-                    user: state.user,
-                    isInfoValied: false,
-                })
-
-            }
-        })
-
-    }
-
+  (data.filter(el=>(el.userName === state.user.userName && el.password === state.user.password))).length?'':setState({
+    user:state.user,
+    isInfoValied:false
+}) 
+        }
 
 
 
+    
 
     return (
-
-
         <div className=' w-full  h-full  '>
 
             <div className=' flex  items-center justify-center h-screen py-3  bg-slate-100 '>
@@ -56,7 +53,7 @@ function Login({ data }) {
                     <div className=' flex '>
                         <div className='flex flex-col justify-center items-center gap-2 ml-4 w-full'>
                             <CgProfile className=' w-20 h-20  mt-2 text-[#00B5CC]' />
-                            <i className={(state.isInfoValied) ? 'hidden' : 'text-red-500 text-center text-lg'}>اطلاعات ورودی شما صحیح نمی باشد</i>
+                            <i className={(state.isInfoValied === false) ? 'text-red-500 text-center text-lg' : 'hidden'}>اطلاعات ورودی شما صحیح نمی باشد</i>
 
                         </div>
                         <Link href='/'>
@@ -87,7 +84,6 @@ function Login({ data }) {
                         </form>
                         <div className='flex flex-col items-center justify-between gap-6'>
                             <Link href='/authentication/SignIn'><i className=' w-[80%] md:w-[50%]  border-[1px] border-blue-600 text-blue-600 text-sm  cursor-pointer text-center p-3'> ثبت نام </i></Link>
-
                             <Link href='/admin/Login'><a className='text-center text-sm self-center w-[80%] md:w-[50%] p-3 rounded-sm cursor-pointer text-blue-400 border-[1px] border-blue-300 '>  ورود به پنل ادمین      </a></Link>
                         </div>
                     </div>
@@ -96,20 +92,12 @@ function Login({ data }) {
 
 
 
+
         </div >
-
-
-
-
-
     )
 }
 
 export default Login
-
-
-
-
 
 export async function getStaticProps() {
 
@@ -121,6 +109,21 @@ export async function getStaticProps() {
         }
     }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

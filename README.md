@@ -1,7 +1,9 @@
+
+
+## Shop Project
+### I used Next.js for this App and I love Next more after do this project with ![](https://www.google.com/imgres?imgurl=https%3A%2F%2Fupload.wikimedia.org%2Fwikipedia%2Fcommons%2Fthumb%2F8%2F8e%2FNextjs-logo.svg%2F1200px-Nextjs-logo.svg.png&imgrefurl=https%3A%2F%2Ffa.wikipedia.org%2Fwiki%2F%25D9%2586%25DA%25A9%25D8%25B3%25D8%25AA_%25D8%25AC%25DB%258C%25E2%2580%258C%25D8%25A7%25D8%25B3&tbnid=Gu8EowV_-l_gbM&vet=12ahUKEwiE6PO8oLz5AhUzyrsIHZx9BaYQMygAegUIARDbAQ..i&docid=sLpBr3NCr7Is5M&w=1200&h=719&q=next%20js&ved=2ahUKEwiE6PO8oLz5AhUzyrsIHZx9BaYQMygAegUIARDbAQ)
+
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
-
-## Getting Started
-
 First, run the development server:
 
 ```bash

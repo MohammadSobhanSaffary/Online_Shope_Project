@@ -6,6 +6,6 @@ import user from './slices/userLogin';
 export const store = configureStore({
     reducer: {
         isLoginValied: adminloginValidation,
-         UserInfo :user ,
+         userInfo :user ,
     }
 })
