@@ -1,9 +1,10 @@
 import { createSlice } from "@reduxjs/toolkit";
+import { getCookie } from "cookies-next";
 
 const slice=createSlice({
     name:'user',
     initialState:{
-        value:'',    
+        value: (getCookie('user')==null)?'':getCookie('user')  ,    
     },
     reducers:{
         setUser:(state,action)=>{

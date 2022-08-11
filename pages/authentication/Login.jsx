@@ -6,10 +6,12 @@ import axios from 'axios';
 import { useRouter } from 'next/router';
 import { useDispatch } from 'react-redux';
 import { setUser } from '../../redux/slices/userLogin';
+import { setCookie } from 'cookies-next';
 
 function Login({ data }) {
     const router = useRouter();
     const dispatch = useDispatch();
+    
     const [state, setState] = useState({
         user:
         {
@@ -24,26 +26,28 @@ function Login({ data }) {
         data.map(el => {
             if (el.userName === state.user.userName && el.password === state.user.password) {
                 setState({
-                  user:el,
-                  isInfoValied:state.isInfoValied
+                    user: el,
+                    isInfoValied: state.isInfoValied
                 })
                 dispatch(setUser(el))
                 router.back();
+              
+                setCookie('user',JSON.stringify(el),{maxAge:60*60*24*2});
             }
-            else{
-              null
-            } 
-        }  );
+            else {
+                null
+            }
+        });
 
-  (data.filter(el=>(el.userName === state.user.userName && el.password === state.user.password))).length?'':setState({
-    user:state.user,
-    isInfoValied:false
-}) 
-        }
+        (data.filter(el => (el.userName === state.user.userName && el.password === state.user.password))).length ? '' : setState({
+            user: state.user,
+            isInfoValied: false
+        })
+    }
 
 
 
-    
+
 
     return (
         <div className=' w-full  h-full  '>

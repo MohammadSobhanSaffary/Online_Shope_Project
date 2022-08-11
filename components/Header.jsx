@@ -11,7 +11,7 @@ import { useSelector } from 'react-redux';
 function Header({ select }) {
     const router = useRouter();
     const userInfo = useSelector(state => state.userInfo.value);
-    console.log(userInfo)
+     
     
 
     const [toggleState, setToggle] = useState(false);
@@ -55,7 +55,7 @@ function Header({ select }) {
                     <div className='flex gap-[40px] '>
                         <div className='flex rtl items-center gap-2'>
                             <CgProfile className=' w-[50px] h-[50px] text-[#575563]  cursor-pointer' onClick={() => router.push('/authentication/Login')} />
-                            <div className={(userInfo.length === 0) ? 'hidden' : 'flex flex-col  '}> <i classname='font-semibold text-lg '>{userInfo.fName} {userInfo.lName}</i> <i>{userInfo.userName}</i></div>
+                            <div className={(userInfo === undefined) ? 'hidden' : 'flex flex-col  '}> <i classname='font-semibold text-lg '>{(userInfo==undefined)? '' : (userInfo)} {(userInfo==undefined)? ' ' : (userInfo)}</i> <i>{(userInfo==undefined)? ' ': (userInfo)}</i></div>
                         </div>
                         <BsCart3 className=' w-[40px] h-[40px] cursor-pointer ' fill='#575563' />
                     </div>
