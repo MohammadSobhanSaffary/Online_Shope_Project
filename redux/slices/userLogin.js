@@ -4,7 +4,7 @@ import { getCookie } from "cookies-next";
 const slice=createSlice({
     name:'user',
     initialState:{
-        value: (getCookie('user')==null)?'':getCookie('user')  ,    
+        value:'' ,    
     },
     reducers:{
         setUser:(state,action)=>{

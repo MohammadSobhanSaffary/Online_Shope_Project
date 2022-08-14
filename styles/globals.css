@@ -5,10 +5,7 @@
 @font-face {
   font-family: 'IRANYekan';
   src: url('../public/1FDCADEC.TTF');
-
-
 }
-
 
 html,
 body {
@@ -21,20 +18,15 @@ body {
 * {
   box-sizing: border-box;
 }
-.rtl{
+
+.rtl {
   direction: rtl;
 }
-
-
-
 
 .menuItems {
   border-top: 1px solid #747380;
   border-bottom: 1px solid #747380;
 }
-
-
-
 
 .slide1 {
   background: url("https://dkstatics-public.digikala.com/digikala-adservice-banners/b96f685f1e353433d6f8df0413066f45e0def1aa_1659379523.jpg?x-oss-process=image/quality,q_95") no-repeat fixed center;
@@ -42,24 +34,44 @@ body {
 }
 
 .slide2 {
-  background: url("https://cdnghesticlub.com/froala/05e368281af5aeSNOWA-Home-Appliance-List1.jpg") no-repeat fixed ;
+  background: url("https://cdnghesticlub.com/froala/05e368281af5aeSNOWA-Home-Appliance-List1.jpg") no-repeat fixed;
   background-position: left;
   background-size: 60%;
 }
-.slide3{
-  background: url('../public/food.jpg') no-repeat  fixed left;
- background-color: rgb(235,234,229);
- background-size: 50٪;
- 
+
+.slide3 {
+  background: url('../public/food.jpg') no-repeat fixed left;
+  background-color: rgb(235, 234, 229);
+  background-size: 50٪;
+
 }
+
 @media only screen and (max-width: 1400px) {
-  .slide3{
+  .slide3 {
     background-position: center;
     background-size: 60%;
   }
 }
-.slide4{
-  background: url('../public/makeup.jpg') no-repeat fixed  center;
+
+.slide4 {
+  background: url('../public/makeup.jpg') no-repeat fixed center;
   background-size: 60%;
   background-color: #2F2331;
+}
+
+tr:nth-child(even) {
+  background-color: #00B5CC;
+  color: white;
+  padding: 10px;
+  text-align: right;
+}
+
+th {
+  background-color: #696774;
+  text-align: center;
+  color: white;
+  padding: 10px;
+  border-left: 0.5px solid rgb(192, 192, 192);
+  border-right: 0.5px solid rgb(231, 226, 226);
+  font-weight: 300;
 }

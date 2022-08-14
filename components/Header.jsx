@@ -1,18 +1,55 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { useRouter } from 'next/router';
 import Image from 'next/image';
 import { CgProfile, CgMenu } from 'react-icons/cg';
 import { BsCart3, BsSearch } from 'react-icons/bs';
 import { AiOutlineClose } from 'react-icons/ai';
 import Link from 'next/link';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import { stringify } from 'postcss';
+import { getCookie } from 'cookies-next';
+import { setUser } from '../redux/slices/userLogin';
 
 
 function Header({ select }) {
     const router = useRouter();
-    const userInfo = useSelector(state => state.userInfo.value);
-     
+    const dispach = useDispatch();
+    const info = useSelector(state => state.userInfo.value);
+    const shopItems = useSelector(staet => staet.cart.value)
+    const [counter, setCounter] = useState('');
+    const parse = (string) => JSON.parse(string);
     
+
+    useEffect(() => {
+        // shopItems.map(el => {
+        //     // let temp;
+        //     // temp=el.number;
+        //     // setCounter(+temp)
+        // } )
+        const tempt=[];
+        shopItems.forEach(element => {
+            tempt.push(element.number)
+        });
+        
+         setCounter( tempt.reduce((a,b)=>a+b,0));
+         
+        
+    }, [shopItems]);
+ console.log(shopItems)
+
+
+    useEffect(() => {
+        const data = getCookie('user');
+      (data)? dispach(setUser(parse(data))):null;
+    
+    }, []);
+
+
+
+
+
+
+
 
     const [toggleState, setToggle] = useState(false);
     const items = [
@@ -55,9 +92,18 @@ function Header({ select }) {
                     <div className='flex gap-[40px] '>
                         <div className='flex rtl items-center gap-2'>
                             <CgProfile className=' w-[50px] h-[50px] text-[#575563]  cursor-pointer' onClick={() => router.push('/authentication/Login')} />
-                            <div className={(userInfo === undefined) ? 'hidden' : 'flex flex-col  '}> <i classname='font-semibold text-lg '>{(userInfo==undefined)? '' : (userInfo)} {(userInfo==undefined)? ' ' : (userInfo)}</i> <i>{(userInfo==undefined)? ' ': (userInfo)}</i></div>
+                            <div className={(info === null) ? 'hidden' : 'flex flex-col  '}> <i className='font-semibold text-lg '> {info?.fName}  {info?.lName}</i> <i>{info?.userName}</i></div>
                         </div>
-                        <BsCart3 className=' w-[40px] h-[40px] cursor-pointer ' fill='#575563' />
+
+                        <span className="relative inline-block cursor-pointer" onClick={() => (info !== '') ? router.push('/cart/cart') : router.push('/authentication/Login')}>
+                            <BsCart3 className='w-[45px] h-[45px] text-[#575563]' />
+                            <span className="absolute top-2 right-5 inline-flex items-center justify-center px-1 py-1 text-md font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-[#00B5CC] rounded-full">
+                                {counter}
+                            </span>
+                        </span>
+
+
+
                     </div>
                     <div className='flex items-center border-[2px] border-cyan-800  cursor-pointer   w-[25%] h-[45px] p-[20px] rounded-md justify-between'>
                         <BsSearch className=' w-[25px] h-[25px] ' fill='#575563' />
@@ -88,7 +134,12 @@ function Header({ select }) {
                 <div className='w-full  flex  items-center justify-center py-2 px-6   gap-[4rem] bg-[#e4e3e3]  cursor-pointer'>
                     <div className='flex  gap-[20px] justify-center items-center'>
                         <BsSearch className=' w-[30px] h-[30px] cursor-pointer' fill='#575563 ' />
-                        <BsCart3 className=' w-[30px] h-[30px] cursor-pointer text-[#575563] ' fill='#575563' />
+                        <span className="relative inline-block">
+                            <BsCart3 />
+                            <span className="absolute top-0 right-0 inline-flex items-center justify-center px-2 py-1 text-[20px] font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-red-600 rounded-full">
+                                99
+                            </span>
+                        </span>
                     </div>
 
                     <span className='rounded-[50%] w-[70px] h-[70px] bg-[#00B5CC] text-white text-sm cursor-pointer  flex justify-center items-center text-center p-5 '>لوگوی فروشگاه</span>
@@ -123,10 +174,26 @@ function Header({ select }) {
                 }
             </div>
         </>
-
     )
+
 }
 export default Header
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

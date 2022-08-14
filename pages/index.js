@@ -9,7 +9,7 @@ import axios from 'axios';
 
 
 export default function Home({ data }) {
-
+ 
   return (
 
     <Main select='/'>
