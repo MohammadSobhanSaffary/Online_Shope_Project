@@ -73,7 +73,7 @@ function categories({ data, params }) {
 
 
             <option  className="w-60  shadow-md shadow-[#575563]" selected disabled>  مرتب سازی بر اساس زمان </option>
-            <option value='2' className="w-60  shadow-md shadow-[#575563]"> جدید ترینن</option>
+            <option value='2' className="w-60  shadow-md shadow-[#575563]">جدید ترین</option>
             <option value='1' className="w-60 shadow-md shadow-[#575563]">قدیمی ترین</option>
 
 

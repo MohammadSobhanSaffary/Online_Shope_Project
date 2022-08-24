@@ -1,5 +1,5 @@
 import { createSlice } from "@reduxjs/toolkit";
-import { getCookie } from "cookies-next";
+
 
 const slice=createSlice({
     name:'user',

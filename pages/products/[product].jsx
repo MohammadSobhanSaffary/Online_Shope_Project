@@ -1,5 +1,6 @@
+
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react'
+ import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Slider2 from '../../components/sldier2';
 import box from '../../public/box.png';
@@ -7,6 +8,7 @@ import Main from '../layout/Main';
 import { BsCart3 } from 'react-icons/bs';
 import { useDispatch, useSelector } from 'react-redux';
 import { setpurchases } from '../../redux/slices/shopSlice';
+import { toast, ToastContainer } from 'react-toastify';
 
 function Product({ data, params }) {
     const dispatch = useDispatch();
@@ -16,15 +18,22 @@ function Product({ data, params }) {
         productId: params.product,
     });
 
-    const persianNumber = (x) => {
-        return x.toLocaleString("fa-IR");
-    }
+    const persianNumber = (x) => x.toLocaleString("fa-IR");
+
 
     const handleShop = (productId) => {
         const product = purchases.filter(el => el.id === productId)[0];
-    
-        console.log(product)
-        if (product!==undefined) {
+        toast.success('!  محصول مورد نظر با موفقیت به سبد خرید اضافه شد   ', {
+            position: "top-center",
+            autoClose: 5000,
+            hideProgressBar: false,
+            closeOnClick: true,
+            pauseOnHover: true,
+            draggable: true,
+            progress: undefined,
+        });
+
+        if (product !== undefined) {
             dispatch(setpurchases([...purchases.filter(el => el.id != productId), {
                 id: productId,
                 number: +product.number + 1
@@ -34,7 +43,7 @@ function Product({ data, params }) {
         else {
             dispatch(setpurchases([...purchases, {
                 id: productId,
-                number:1 
+                number: 1
             }]))
         }
     }
@@ -59,6 +68,11 @@ function Product({ data, params }) {
 
     return (
         <Main select={`/categories/${state.product.tag}`}>
+
+
+           
+
+
             <div className='w-full h-full py-5 '>
 
 
@@ -69,7 +83,7 @@ function Product({ data, params }) {
                         <h1 className='text-3xl font-bold hidden md:block'>{state.product.fullName}</h1>
                         <p className='text-right w-[70%]  break-[5px] text-2xl leading-loose   '>{state.product.informations}</p>
                         <div className='flex flex-col-reverse md:flex-row gap-3  items-center  w-[max-content] md:w-[50%] '>
-                            <button className='lg:text-xl text-md bg-[#00B5CC] text-white p-2 lg:p-5 rounded-md self-start flex items-center   gap-3 ' onClick={()=>handleShop(params.product)}>
+                            <button className='lg:text-xl text-md bg-[#00B5CC] text-white p-2 lg:p-5 rounded-md self-start flex items-center   gap-3 ' onClick={() => handleShop(params.product)}>
                                 <BsCart3 className='w-8 h-8' />
                                 اضافه کردن به سبد خرید
                             </button>
@@ -164,6 +178,7 @@ function Product({ data, params }) {
                 </div>
 
             </div>
+
         </Main >
     )
 }

@@ -2,11 +2,12 @@ import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
+
 function Card({ product }) {
     const persianNumber = (x) => {
         return x.toLocaleString("fa-IR");
-
     }
+   
 
 
     return (

@@ -21,11 +21,7 @@ function Header({ select }) {
     
 
     useEffect(() => {
-        // shopItems.map(el => {
-        //     // let temp;
-        //     // temp=el.number;
-        //     // setCounter(+temp)
-        // } )
+     
         const tempt=[];
         shopItems.forEach(element => {
             tempt.push(element.number)
@@ -35,7 +31,7 @@ function Header({ select }) {
          
         
     }, [shopItems]);
- console.log(shopItems)
+
 
 
     useEffect(() => {
@@ -95,7 +91,7 @@ function Header({ select }) {
                             <div className={(info === null) ? 'hidden' : 'flex flex-col  '}> <i className='font-semibold text-lg '> {info?.fName}  {info?.lName}</i> <i>{info?.userName}</i></div>
                         </div>
 
-                        <span className="relative inline-block cursor-pointer" onClick={() => (info !== '') ? router.push('/cart/cart') : router.push('/authentication/Login')}>
+                        <span className="relative inline-block cursor-pointer" onClick={() => (info !== '' && shopItems.length!==0) ? router.push('/cart/cart') :(info === '') ?router.push('/authentication/Login'):''}>
                             <BsCart3 className='w-[45px] h-[45px] text-[#575563]' />
                             <span className="absolute top-2 right-5 inline-flex items-center justify-center px-1 py-1 text-md font-bold leading-none text-red-100 transform translate-x-1/2 -translate-y-1/2 bg-[#00B5CC] rounded-full">
                                 {counter}
