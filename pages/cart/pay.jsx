@@ -6,9 +6,11 @@ import { TiTick } from 'react-icons/ti'
 import { RiFileForbidFill } from 'react-icons/ri'
 import { toast, ToastContainer } from 'react-toastify';
 import { useRouter } from 'next/router';
+import { useDispatch } from 'react-redux';
 
 function Pay({ data }) {
     const router = useRouter();
+    const dispatch=useDispatch();
     return (
         <div className='w-full h-full flex flex-col  items-center border-1px  pb-8'>
             <div className='w-full flex flex-row-reverse justify-between p-6 '><Image src='/Shaparak.png' width={150} height={75} />  <span className=' text-3xl'>درگاه پرداختی سامان</span>   <Image src='/kish.jpg' width={200} height={200} /></div>
@@ -46,6 +48,7 @@ function Pay({ data }) {
                                     progress: undefined,
                                 })
                                 router.back();
+
                             }}><RiFileForbidFill />انصراف</button>
                         </div>
 

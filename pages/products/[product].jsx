@@ -1,6 +1,6 @@
 
 import Image from 'next/image';
- import React, { useEffect, useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import axios from 'axios';
 import Slider2 from '../../components/sldier2';
 import box from '../../public/box.png';
@@ -17,12 +17,28 @@ function Product({ data, params }) {
         product: data.filter(el => el.id === params.product)[0],
         productId: params.product,
     });
-
+    console.log(state.product)
     const persianNumber = (x) => x.toLocaleString("fa-IR");
 
 
     const handleShop = (productId) => {
-        const product = purchases.filter(el => el.id === productId)[0];
+        const product = purchases.find(el => el.id === productId);
+
+        if (product !== undefined) {
+            dispatch(setpurchases([...purchases.filter(el => el.id != productId), {
+                productInfo: state.product,
+                id:state.productId,
+                number: +product.number + 1
+            }]))
+
+        }
+        else {
+            dispatch(setpurchases([...purchases, {
+                productInfo: state.product,
+                id:state.productId,
+                number: 1
+            }]))
+        }
         toast.success('!  محصول مورد نظر با موفقیت به سبد خرید اضافه شد   ', {
             position: "top-center",
             autoClose: 5000,
@@ -32,20 +48,6 @@ function Product({ data, params }) {
             draggable: true,
             progress: undefined,
         });
-
-        if (product !== undefined) {
-            dispatch(setpurchases([...purchases.filter(el => el.id != productId), {
-                id: productId,
-                number: +product.number + 1
-            }]))
-
-        }
-        else {
-            dispatch(setpurchases([...purchases, {
-                id: productId,
-                number: 1
-            }]))
-        }
     }
 
 
@@ -70,7 +72,7 @@ function Product({ data, params }) {
         <Main select={`/categories/${state.product.tag}`}>
 
 
-           
+
 
 
             <div className='w-full h-full py-5 '>

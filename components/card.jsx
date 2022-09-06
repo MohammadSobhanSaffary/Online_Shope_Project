@@ -7,13 +7,13 @@ function Card({ product }) {
     const persianNumber = (x) => {
         return x.toLocaleString("fa-IR");
     }
-   
+
 
 
     return (
-        <div className='      h-[26rem] my-20'>
+        <div className='h-[26rem] my-20 cursor-pointer '>
             <Link href={`/products/${product.id}`}>
-                <div className='w-full h-full flex flex-col items-center gap-5 justify-between shadow-lg px-5 py-4 shadow-[#575563]  rounded-lg'>
+                <div className='w-full h-full flex flex-col items-center gap-5 justify-between shadow-lg px-5 py-4 shadow-[#575563]  rounded-lg '>
                     <Image src={product.photo} width={250} height={250} />
                     <span className='text-right'>{product.fullName}</span>
                     <div className='flex flex-col gap-4 self-start'>

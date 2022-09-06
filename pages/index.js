@@ -32,8 +32,8 @@ export default function Home({ data }) {
           </div>
         </div>
 
-        <div className="col-span-10 ">
-          <Slider2 data={data} name={'best'} />
+        <div className="col-span-10 px-3 ">
+          <Slider2 data={data.filter(el=>el.best==='1')} name={'best'} />
         </div>
 
         <div className="col-span-1 mt-16 ml-1 ">
@@ -54,8 +54,8 @@ export default function Home({ data }) {
           </div>
         </div>
 
-        <div className="col-span-10 ">
-          <Slider2 data={data} name={'new'} />
+        <div className="col-span-10 px-3">
+          <Slider2 data={data.filter(el=>el.new==='1')} name={'new'} />
         </div>
 
         <div className="col-span-1 mt-16 ml-1 ">

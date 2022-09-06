@@ -2,30 +2,25 @@ import Main from "../layout/Main";
 import React, { useEffect, useState } from 'react'
 import Card from "../../components/card";
 import axios from 'axios';
-function categories({ data, params }) {  
+function categories({ data, params }) {
   const [state, setstate] = useState(
     {
       products: data.filter(el => el.tag === params.categories),
       params
     });
-
-  useEffect(() => {
-
-
-    setstate({
-      products: data.filter(el => el.tag === params.categories),
-      params
-    })
-  }
-    , [params.categories]);
-
- 
+    useEffect(() => {
+     setstate( {
+        products: data.filter(el => el.tag === params.categories),
+        params
+      })
+    }, [params])
+    
   return (
     <Main select={`/categories/${params.categories}`}>
       <div className='w-full h-full flex flex-col items-center' >
         <div className='md:w-[50%] w-full h-20 flex md:justify-between justify-center gap-3 md:gap-0 items-center '>
 
-          
+
           <select className="   w-70 p-3 border-2 border-[#00B5CC] rounded-lg text-end font-semibold appearance-none hover:bg-[#00B5CC] focus:border-[#00B5CC] hover:text-white" onChange={(e) => {
 
             (e.target.value === '1') ?
@@ -72,7 +67,7 @@ function categories({ data, params }) {
 
 
 
-            <option  className="w-60  shadow-md shadow-[#575563]" selected disabled>  مرتب سازی بر اساس زمان </option>
+            <option className="w-60  shadow-md shadow-[#575563]" selected disabled>  مرتب سازی بر اساس زمان </option>
             <option value='2' className="w-60  shadow-md shadow-[#575563]">جدید ترین</option>
             <option value='1' className="w-60 shadow-md shadow-[#575563]">قدیمی ترین</option>
 
@@ -141,7 +136,7 @@ export async function getStaticPaths() {
 
 export async function getStaticProps({ params }) {
 
-   const res = await axios.get(`http://localhost:4000/products`)
+  const res = await axios.get(`http://localhost:4000/products`)
   const data = await res.data
   return {
     props: {

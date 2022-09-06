@@ -21,9 +21,9 @@ function Login({ data }) {
 
     const handleClick = (e) => {
         e.preventDefault();
-        let validation = data.filter(el => ((el.userName === state.userName && el.passWord === state.password) ? true : false))
-      
-        if (!!validation.length) {
+        let validation = data.filter(el => ((el.userName === state.userName && el.passWord === state.password) ? true : false))[0]
+       console.log(validation)
+        if (validation) {
 
             setState({
                 userName: state.userName,
@@ -31,7 +31,7 @@ function Login({ data }) {
                 validation: true
             });
             dispatch(setValidation(true));
-            router.push('/admin/Pannel');
+            router.push('/admin/Order');
         }
 
 
@@ -88,7 +88,7 @@ function Login({ data }) {
                                 }
                             )} />
                         </div>
-                        <button className='bg-[#00b5cc] text-white border-[2px] border-[#00b5cc] w-[250px] h-[40px] self-center rounded-lg  mr-8' >ورود به اکانت</button>
+                        <button className='bg-[#00b5cc] text-white border-[2px] border-[#00b5cc] w-[250px] h-[40px] self-center rounded-lg  mr-8' type='submit' >ورود به اکانت</button>
                     </form>
 
 

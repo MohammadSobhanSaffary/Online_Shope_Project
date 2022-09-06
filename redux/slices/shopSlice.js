@@ -11,9 +11,9 @@ const slice = createSlice({
 
         addNumber: (state, action) => {
             const product = state.value.find(el => el.id === action.payload);
-            (product) ? state.value.map(el => {
+            state.value.map(el => {
                 el.id === product.id ? { ...product, number: +product.number++ } : el
-            }) : ''
+            })
         },
         reduceNumber: (state, action) => {
             const product = state.value.find(el => el.id === action.payload);
@@ -23,11 +23,11 @@ const slice = createSlice({
         }
 
         , removeItem: (state, action) => {
-            const product = state.value.find(el => el.id === action.payload);
-            state.value = state.value.filter(el => el.id !== product.id)
+            state.value = state.value.filter(el => el.id !== action.payload)
         }
+
 
     }
 })
-export const { setpurchases, addNumber, reduceNumber,removeItem } = slice.actions;
+export const { setpurchases, addNumber, reduceNumber, removeItem } = slice.actions;
 export default slice.reducer;
