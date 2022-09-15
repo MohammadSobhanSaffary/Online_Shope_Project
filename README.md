@@ -1,14 +1,36 @@
-# Hi this is Sobhan a progroming and front-end lover
+# My online shop
+## Home
+![MyProject](https://user-images.githubusercontent.com/96923486/190213743-d6dfb86b-1bf9-4834-984c-caa2cfecdce5.png)
+
+## categories and filter by cost
+![filter by cost](https://user-images.githubusercontent.com/96923486/190349588-81bdbea6-3d6b-4bc7-b830-9e383afb494f.PNG)
+
+##  search
+![search](https://user-images.githubusercontent.com/96923486/190350716-cfabea26-3ba8-4945-be78-fa42b47b0256.png)
+
+## product page
+![product page](https://user-images.githubusercontent.com/96923486/190351166-b18e040d-4917-4670-bb3c-3b36d4f10184.PNG)
+## cart
+![cart](https://user-images.githubusercontent.com/96923486/190404975-1f53ad8d-b9a0-4e2d-a9ab-2fc6e1b9c45d.PNG)
+
+
+## sign in
+![Login](https://user-images.githubusercontent.com/96923486/190365878-601a8fe3-9dcc-4a50-aa70-beadb034f0bf.PNG)
+
+
+## sign up
+![sign up](https://user-images.githubusercontent.com/96923486/190365962-2a153e8e-d2dd-4758-a37f-f344a2daff77.PNG)
 
 
 
-## Shop Project
-### I used Next.js for this App and I love Next more after do this project with ![NEXT.js](https://lozilearn.com/storage/2021/04/nextjs.png)
 
-## I use Json Server in my Project and ou can run it easily  read this link for learn work with json Server ![https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
+
+### After doing this project, I became more interested in next ![NEXT.js](https://lozilearn.com/storage/2021/04/nextjs.png)
+
+## I use Json Server in my Project and you can run it easily, Read this link to learn more about json server ![https://www.npmjs.com/package/json-server](https://www.npmjs.com/package/json-server)
   ## ![](https://static.cdn.asset.aparat.com/avt/44460383-1435-b__4631.jpg)
 
-## and used Figma for design 
+## and Figma is used for design
 ![figma](https://play-lh.googleusercontent.com/efwNlvQ3pch_-hZ9xeHf6YF-f_rHzQQo21IVevPLOxpzSVfxuVKom2_7C6axFbC-3rU)
 ## and  tailwind is my assistant for styling my Project  ![talwind css](https://media.geeksforgeeks.org/wp-content/cdn-uploads/20211110050115/Tailwind-CSS-Tutorial.png)
  ## swiper js is my slider library ![swipper js](https://swiperjs.com/images/share-banner-3.png)
