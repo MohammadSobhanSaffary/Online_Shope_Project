@@ -21,6 +21,8 @@
 ## sign up
 ![sign up](https://user-images.githubusercontent.com/96923486/190365962-2a153e8e-d2dd-4758-a37f-f344a2daff77.PNG)
 
+## ui/ux design
+![ui ux](https://user-images.githubusercontent.com/96923486/190890893-944370f1-403a-4914-b1a7-f8e66ddb8cb8.PNG)
 
 
 
